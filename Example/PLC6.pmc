@@ -1,0 +1,10 @@
+P601 = 1
+P602 = 1
+P603 = 1
+P604 = 1
+P605 = 1
+P606 = 1
+P607 = 1
+P608 = 1
+
+#include "../PLCs/PLC6_Initialise_and_Reset.pmc"

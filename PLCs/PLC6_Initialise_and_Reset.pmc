@@ -1,0 +1,242 @@
+#DEFINE PLC_NO 6
+
+#DEFINE SERVO 0
+#DEFINE STEPPER 1
+
+;Configurations settings 0=Brushless or DC,  1 = Stepper
+#DEFINE AXIS1_TYPE P601
+#DEFINE AXIS2_TYPE P602
+#DEFINE AXIS3_TYPE P603
+#DEFINE AXIS4_TYPE P604
+#DEFINE AXIS5_TYPE P605
+#DEFINE AXIS6_TYPE P606
+#DEFINE AXIS7_TYPE P607
+#DEFINE AXIS8_TYPE P608
+
+#DEFINE AXIS_NO P610
+;TIMER
+#DEFINE TIMER I(5111+(PLC_NO&30)*50+PLC_NO%2)
+#DEFINE MILLISECONDS * 8388608/i10
+#DEFINE 50MS_WAIT TIMER=50 MILLISECONDS WHILE(TIMER>0)ENDWHILE
+
+CLOSE
+OPEN PLC PLC_NO
+CLEAR
+TIMER = 2000 MILLISECONDS    ;First Delay
+WAIT
+
+AXIS_NO=4
+IF(AXIS4_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  4 
+	Command "wx$78014, $FBCDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  4
+	Command "wx$78014, $FB4DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  4
+	Command "wx$78014, $F30DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  4 
+	Command "wx$78014, $FBCCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  4
+	Command "wx$78014, $FB4CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  4	
+	Command "wx$78014, $F30CFE"
+	50MS_WAIT
+ENDIF
+M448 = 0 ;reset phase error
+
+AXIS_NO=3
+IF(AXIS3_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  3
+	Command "wx$78014, $FACDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  3
+	Command "wx$78014, $FA4DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  3
+	Command "wx$78014, $F20DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  3 
+	Command "wx$78014, $FACCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  3
+	Command "wx$78014, $FA4CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  3	
+	Command "wx$78014, $F20CFE"
+	50MS_WAIT
+ENDIF
+M348 = 0 ;reset phase error
+
+AXIS_NO=2
+IF(AXIS2_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  2 
+	Command "wx$78014, $F9CDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  2
+	Command "wx$78014, $F94DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  2
+	Command "wx$78014, $F10DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  2 
+	Command "wx$78014, $F9CCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  2
+	Command "wx$78014, $F94CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  2	
+	Command "wx$78014, $F10CFE"
+	50MS_WAIT
+ENDIF
+M248 = 0 ;reset phase error
+
+AXIS_NO=1
+IF(AXIS1_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  1 
+	Command "wx$78014, $F8CDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  1
+	Command "wx$78014, $F84DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  1
+	Command "wx$78014, $F00DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  1 
+	Command "wx$78014, $F8CCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  1
+	Command "wx$78014, $F84CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  1	
+	Command "wx$78014, $F00CFE"
+	50MS_WAIT
+ENDIF
+M148 = 0 ;reset phase error
+
+AXIS_NO=8
+IF(AXIS8_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  8 
+	Command "wx$78114, $FBCDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  8
+	Command "wx$78114, $FB4DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  8
+	Command "wx$78114, $F30DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  8 
+	Command "wx$78114, $FBCCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  8
+	Command "wx$78114, $FB4CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  8	
+	Command "wx$78114, $F30CFE"
+	50MS_WAIT
+ENDIF
+M848 = 0 ;reset phase error
+
+AXIS_NO=7
+IF(AXIS7_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  7
+	Command "wx$78114, $FACDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  7
+	Command "wx$78114, $FA4DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  7
+	Command "wx$78114, $F20DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  7
+	Command "wx$78114, $FACCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  7
+	Command "wx$78114, $FA4CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  7	
+	Command "wx$78114, $F20CFE"
+	50MS_WAIT
+ENDIF
+M748 = 0 ;reset phase error
+
+AXIS_NO=6
+IF(AXIS6_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  6 
+	Command "wx$78114, $F9CDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  6
+	Command "wx$78114, $F94DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  6
+	Command "wx$78114, $F10DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  6 
+	Command "wx$78114, $F9CCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  6
+	Command "wx$78114, $F94CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  6	
+	Command "wx$78114, $F10CFE"
+	50MS_WAIT
+ENDIF
+M648 = 0 ;reset phase error
+
+AXIS_NO=5
+IF(AXIS5_TYPE=STEPPER)
+	
+	;Set Axis Type and CLRF Bits: Axis  5 
+	Command "wx$78114, $F8CDFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  5
+	Command "wx$78114, $F84DFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  5
+	Command "wx$78114, $F00DFE"
+	50MS_WAIT
+	
+ELSE
+	;Set Axis Type and CLRF Bits: Axis  5 
+	Command "wx$78114, $F8CCFE"
+	50MS_WAIT
+	;RESET CLRF Bit: Axis  5
+	Command "wx$78114, $F84CFE"
+	50MS_WAIT
+	;RESET Protection Bit: Axis  5	
+	Command "wx$78114, $F00CFE"
+	50MS_WAIT
+ENDIF
+M548 = 0 ;reset phase error
+
+
+DISABLE PLC PLC_NO
+CLOSE
+; -----------------------------------------------------
+
+; End Of PLC6
+
