@@ -1,0 +1,108 @@
+;12/11/2013 After Two Slow CPUs i52 now defaults to 160Mhz....
+;31/10/2013 TPB.  GB_Startup has been updated now we are confident
+;8/1/2014 TPB.  Oops.  There is a series of Briquettes (Listed serial nos elswhere)
+;               that have 'issues' above 80MHz so DO NOT LOAD THIS FILE as
+;               The internal Hardware is closer to the original Brick
+;02/10/2015 LH. Default CPU freq set to 80Mhz
+
+;it will now work on both Brick and Briquette without issue.
+;This Patch is now only required if working with small
+;motors (<1 Amp) or require to maximise motor speed.
+;it does set the clock faster.
+ 
+;Updated 4/10/2013 to make Linux Friendly.  Space removed from name and leading '0' for '.95'  
+;
+;Patch for Briquette values
+;Rationalised so only differences from GB_Startup.pmc are included TPB 31/10/2012
+;changes WY:$35xx to I80yy to ease EPICS use TPB 9/4/2013
+
+CLOSE DEL GAT
+i52=7   ;7 = 80Mhz clock, to be on the safe side 
+				;15=160Mhz clock (admit defeat!) NOTE Do Not load this File into 80Mhz Briqs
+         ;23=240Mhz clock!! some Briquettes may fall over?? investigation in progress
+         ;latest info amy reveal most will not achieve this speed..  check Asset list.
+
+; Clock setup parameters
+;19.677 max phase
+;9.839 KHz PWM  9.839KHz phase 4.917KHz servo
+;I7100=2996 I6800=2996
+;I7000=2996
+;I7101=1 I6801=1
+;I7001=1
+;I7102=1 I6802=1
+;I7002=1
+;I10=1705244
+I7004=3 I7104=3  ;default is 4, set to 3 (legency) , original '0' causes pfm calc issues
+I7003=2257 I7103=2257	; changed from 1234- ECO mod makes 1234 give trouble 2257 give encoder sample 8Mhz
+
+; Encoder Conversion Table Setup
+;As standard except 24Bit + Offset 24  (No shift remains)
+;Note you will need to reduced all the Gains by a factor of 32 - or reduce Ixx08 Ixx09
+;Plus some other features which are integer e.g Friction Feed Foward may now act weirdly.
+;You could leave the original settigns $10020 - if you like.
+;I8009=$18018  ;$10020
+;I8012=$18018  ;$10020
+;I8015=$18018  ;$10020
+;I8018=$18018  ;$10020
+;I8021=$18018  ;$10020
+;I8024=$18018  ;$10020
+;I8027=$18018  ;$10020
+;I8030=$18018  ;$10020
+
+
+; PWM scale factor settings
+;originally we were told this should be I7x00 + 10%
+;Then = I7x00
+;Now = I7x00 - 5%  ...  are we guessing?
+I166=INT(I7000*0.95)  
+I266=I166  
+I366=I166  
+I466=I166  
+I566=INT(I7100*0.95)
+I666=I566
+I766=I566
+I866=I566
+
+; Current Loop Gainsappear OK for 3A Motors
+;I161=0.1 I162=0 I176=1.1  ;was i161=0.03 i162=0.3 i176=0.3 ;assiatnt suggest 0.035,0.0,0.9
+;I261=0.1 I262=0 I276=1.1
+;I361=0.1 I362=0 I376=1.1
+;I461=0.1 I462=0 I476=1.1
+;I561=0.1 I562=0 I576=1.1
+;I661=0.1 I662=0 I676=1.1
+;I761=0.1 I762=0 I776=1.1
+;I861=0.1 I862=0 I876=1.1
+
+; I2T Protection Settings (TPB puzzeling ixx69 is Integer so DP irrelevent?)
+;OK  the value is calculated from DTau 'Geo Brick LV Setup Assistant 2.?.xls'
+;and is the MINIMUM of Calculated or Theorectical values as below (see Brick LV manual)
+;Calculated Ixx69 = Max Motor Speed* Electrical Cycles per Revolution/ 60 * 2048/6/(Servo Clock *1000) 
+;Theoretical Ixx69 = Max Electrical Length per Servo Cycle/256 
+;It will limit the speed achievable so too small and you get FE unless you crawl
+;too big tends to make the scaling too coarse.
+;set so that an o1 command gives about the same speed as a J+ command 
+;try 50 for now as compromise....  may change later
+I157=0 I158=0 I169=50  ;
+I257=0 I258=0 I269=50  ;
+I357=0 I358=0 I369=50
+I457=0 I458=0 I469=50
+I557=0 I558=0 I569=50
+I657=0 I658=0 I669=50
+I757=0 I758=0 I769=50
+I857=0 I858=0 I869=50
+
+;4096=6400/rev 6400 =10000/rev  
+I171,8,100=6400
+
+;this is correct if ixx01=1 (X Reg) and 16 bits)
+I191,8,100=$500000  ; 
+
+; PID values for Stepper motors only
+;I130,8,100=1024
+;I131,8,100=0
+;I132,8,100=265
+;I133,8,100=1024
+;I134,8,100=1
+;I135,8,100=0
+
+;End of Patch

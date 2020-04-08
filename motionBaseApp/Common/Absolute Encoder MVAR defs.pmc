@@ -1,0 +1,44 @@
+;Assign M199 and MX599 to the ACC 910 Abs Encoder Global Control Register
+;M199 for axis #1 to #4;  M599 for axis #5 to #8
+;Note you can test for the Protocol installed by reading the lowest
+;'nibble' Of the Global Control Register: Mn99 AND $F = Protocol
+;$2 = SSI
+;$3 = EnDat
+;$4 = Hyperface
+;$5 = Yashkawa I
+;$6 = Yashkawa II
+;$B = BISS B/C
+
+M199->X:$78B2F,24,U
+M599->X:$78B3F,24,U
+
+;Assign Mx98 Pointers to the ACC 910 Abs Encoder Control Channels
+;Generally $78Bn0,4,8,C where n=2 for axis 1-4 and n=3 for axis 5-8
+M198->X:$78B20,24,U
+M298->X:$78B24,24,U
+M398->X:$78B28,24,U
+M498->X:$78B2C,24,U
+M598->X:$78B30,24,U
+M698->X:$78B34,24,U
+M798->X:$78B38,24,U
+M898->X:$78B3C,24,U
+
+;Readback Registers A and B (C and D not used?)
+M196->Y:$78B21,24,U ;B
+M296->Y:$78B25,24,U
+M396->Y:$78B29,24,U
+M496->Y:$78B2D,24,U
+M596->Y:$78B31,24,U
+M696->Y:$78B35,24,U
+M796->Y:$78B39,24,U
+M896->Y:$78B3D,24,U
+
+M197->Y:$78B20,24,U  ;A
+M297->Y:$78B24,24,U
+M397->Y:$78B28,24,U
+M497->Y:$78B2C,24,U
+M597->Y:$78B30,24,U
+M697->Y:$78B34,24,U
+M797->Y:$78B38,24,U
+M897->Y:$78B3C,24,U
+
