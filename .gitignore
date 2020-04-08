@@ -1,11 +1,6 @@
 *~
-O.*
-bin
-dbd
-db
-data
-lib
-.svn*
-iocs/
-documentation/doxygen
-.idea
+*MAP
+*PMA
+*TBL
+*56K
+*LOG

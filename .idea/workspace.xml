@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69a14db3-6d9b-4f72-8af0-a58ca9218d8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/CONFIG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/CONFIG_SITE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/RELEASE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/RULES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/RULES.ioc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/RULES_DIRS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure/RULES_TOP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/builder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/makeDocumentation/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/makeDocumentation/config.src" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/makeDocumentation/manual.src" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/makeIocs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/makeIocs/Makefile.iocs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/makeIocs/example.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/makeIocs/example_RELEASE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/module.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/iocs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/Absolute Encoder MVAR defs.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/Absolute Encoder MVAR defs.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/BRICK_M_variables Pre 22Aug16.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/BRICK_M_variables Pre 22Aug16.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/BRICK_M_variables.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/BRICK_M_variables.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/BriquetteNewPatch.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/BriquetteNewPatch.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/BriquetteNewPatch_Short.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/BriquetteNewPatch_Short.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/ECT_standard_table_AddedMACRO.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/ECT_standard_table_AddedMACRO.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/GB_ECT_Default.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/GB_ECT_Default.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/GB_Startup.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/GB_Startup.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/PMAC_M_variables.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/PMAC_M_variables.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/PMAC_Special_M_Defs.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/PMAC_Special_M_Defs.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/Standard_ETC_Plus_MACRO.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/Standard_ETC_Plus_MACRO.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/TURBNA6_nano_servo.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/TURBNA6_nano_servo.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/Template.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/Template.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Common/clear_PLC_CS.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/clear_PLC_CS.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Db/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/PLCs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/PLCs/PLC1_BRICK_initialise.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/PLCs/PLC1_BRICK_initialise.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/PLCs/PLC2_motion_stop.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/PLCs/PLC2_motion_stop.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/PLCs/PLC4_encoder_loss.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/PLCs/PLC4_encoder_loss.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/PLCs/PLC7_kill_when_idle.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/PLCs/PLC7_kill_when_idle.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/PLCs/PLC7_power_down_when_idle.pmc" beforeDir="false" afterPath="$PROJECT_DIR$/PLCs/PLC7_power_down_when_idle.pmc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/opi/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/opi/edl/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/opi/symbol/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/protocol/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/src/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motionBaseApp/src/motionBaseMain.cpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1aFawQxVfqkLmLvOTIpJ8KBN0xn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PLCs" />
+      <recent name="$PROJECT_DIR$/Configuration" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69a14db3-6d9b-4f72-8af0-a58ca9218d8b" name="Default Changelist" comment="" />
+      <created>1586334033752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586334033752</updated>
+      <workItem from="1586334035647" duration="1551000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
